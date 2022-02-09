@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AplusMobProj.App">
+    <Application.Resources>
+        <Style TargetType="Button">
+            <Setter Property="BackgroundColor" Value="DeepSkyBlue"/>
+            <Setter Property="CornerRadius" Value="50"/>
+            <Setter Property="Padding" Value="10"/>
+        </Style>
+        <Style TargetType="Entry">
+            <Setter Property="BackgroundColor" Value="#e5e5e5"/>
+        </Style>
+    </Application.Resources>
+</Application>

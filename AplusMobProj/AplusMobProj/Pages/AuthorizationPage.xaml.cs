@@ -1,0 +1,30 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
+
+namespace AplusMobProj.Pages
+{
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class AuthorizationPage : ContentPage
+    {
+        public AuthorizationPage()
+        {
+            InitializeComponent();
+        }
+
+        private async void btn_registr_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Pages.RegistrationPage());
+        }
+
+        private void btn_login_Clicked(object sender, EventArgs e)
+        {
+
+        }
+    }
+}

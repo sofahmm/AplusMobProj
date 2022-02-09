@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AplusMobProj.Pages.RegistrationPage"
+             Visual="Material">
+    <NavigationPage.TitleView>
+        <StackLayout >
+            <!--Padding="0, 0, 20 ,0" Orientation="Horizontal"-->
+            <Label Text="Регистрация"
+                   Margin="0, 0, 75, 0"
+                   TextColor="White"
+                   HorizontalTextAlignment="Center"
+                   FontSize="Title"/>
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        <StackLayout>
+            <Entry Placeholder="Логин"
+                   Margin="15"/>
+            <Entry Placeholder="E-mail"
+                Margin="15"/>
+            <Entry Placeholder="Пароль"
+                Margin="15"/>
+            <Entry Placeholder="Пароль"
+                   Margin="15"/>
+            <Button x:Name="btm_registrat"
+                    Clicked="btm_registrat_Clicked"
+                    VerticalOptions="EndAndExpand"
+                    Margin="0,0,0,50"
+                    Text="Зарегистрироваться"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
