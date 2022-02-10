@@ -22,9 +22,9 @@ namespace AplusMobProj.Pages
             await Navigation.PushAsync(new Pages.RegistrationPage());
         }
 
-        private void btn_login_Clicked(object sender, EventArgs e)
+        private async void btn_login_Clicked(object sender, EventArgs e)
         {
-
+            await Navigation.PushAsync(new Pages.SelectProjectPage());
         }
     }
 }

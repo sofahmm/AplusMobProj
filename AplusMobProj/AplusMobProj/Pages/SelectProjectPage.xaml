@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AplusMobProj.Pages.SelectProjectPage"
+             Visual="Material"
+             Title="Projects">
+    <NavigationPage.TitleView>
+        <StackLayout Padding="0,0,20,0" Orientation="Horizontal">
+            <Label FontSize="Title"
+                   HorizontalOptions="CenterAndExpand"
+                   Text="Проекты"
+                   TextColor="White"/>
+            <Label x:Name="Add"
+                   FontFamily="ProjectFont"
+                   FontSize="Title"
+                   HorizontalOptions="EndAndExpand"
+                   Text="&#xe145;"
+                   TextColor="White">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                </Label.GestureRecognizers>
+            </Label>
+        </StackLayout>
+    </NavigationPage.TitleView>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <x:Array x:Key="Projects" Type="{x:Type x:String}">
+                <x:String>Проект 1</x:String>
+                <x:String>Проект 2</x:String>
+                <x:String>Проект 3</x:String>
+                <x:String>Проект 4</x:String>
+                <x:String>Проект 5</x:String>
+                <x:String>Проект 6</x:String>
+                <x:String>Проект 7</x:String>
+                <x:String>Проект 8</x:String>
+                <x:String>Проект 9</x:String>
+                <x:String>Проект 10</x:String>
+                <x:String>Проект 11</x:String>
+                <x:String>Проект 12</x:String>
+                <x:String>Проект 13</x:String>
+                <x:String>Проект 14</x:String>
+                <x:String>Проект 15</x:String>
+                <x:String>Проект 16</x:String>
+                <x:String>Проект 17</x:String>
+                <x:String>Проект 18</x:String>
+                <x:String>Проект 19</x:String>
+                <x:String>Проект 20</x:String>
+            </x:Array>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <StackLayout>
+        <ListView x:Name="project_lv" ItemsSource="{StaticResource Key=Projects}" ItemSelected="project_lv_ItemSelected"/>
+    </StackLayout>
+</ContentPage>
