@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AplusMobProj.Pages.EditProjectPage"
+             Visual="Material">
+    <NavigationPage.TitleView>
+        <StackLayout Padding="0,0,20,0" Orientation="Horizontal">
+            <Label Text="Изменить"
+                   TextColor="White"
+                   FontSize="Title"
+                   HorizontalTextAlignment="Center"/>
+            <Label FontFamily="ProjectFont"
+                   Text="&#xe872;"
+                   TextColor="White"
+                   HorizontalOptions="EndAndExpand"
+                   FontSize="Title"/>
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        <StackLayout>
+            <Entry Placeholder="Имя проекта" />
+            <Editor Placeholder="Описание"/>
+            <Entry Placeholder="Телефон №1"/>
+            <Entry Placeholder="E-mail"/>
+            <Entry Placeholder="Адрес"/>
+            <StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand">
+                <Button HorizontalOptions="Start"
+                        Text="отмена"/>
+                <Button HorizontalOptions="End"
+                        Text="изменить"/>
+            </StackLayout>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

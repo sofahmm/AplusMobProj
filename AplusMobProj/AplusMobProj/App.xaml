@@ -11,5 +11,8 @@
         <Style TargetType="Entry">
             <Setter Property="BackgroundColor" Value="#e5e5e5"/>
         </Style>
+        <Style TargetType="Editor">
+            <Setter Property="BackgroundColor" Value="#e5e5e5"/>
+        </Style>
     </Application.Resources>
 </Application>
