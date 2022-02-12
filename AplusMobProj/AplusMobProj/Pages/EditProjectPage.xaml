@@ -7,29 +7,40 @@
         <StackLayout Padding="0,0,20,0" Orientation="Horizontal">
             <Label Text="Изменить"
                    TextColor="White"
-                   FontSize="Title"
-                   HorizontalTextAlignment="Center"/>
+                   FontSize="Large"
+                   HorizontalOptions="CenterAndExpand"
+                   VerticalOptions="CenterAndExpand"/>
             <Label FontFamily="ProjectFont"
                    Text="&#xe872;"
                    TextColor="White"
-                   HorizontalOptions="EndAndExpand"
-                   FontSize="Title"/>
+                   VerticalOptions="CenterAndExpand"
+                   HorizontalOptions="End"
+                   FontSize="Title">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                </Label.GestureRecognizers>
+            </Label>
         </StackLayout>
     </NavigationPage.TitleView>
     <ContentPage.Content>
-        <StackLayout>
-            <Entry Placeholder="Имя проекта" />
-            <Editor Placeholder="Описание"/>
-            <Entry Placeholder="Телефон №1"/>
-            <Entry Placeholder="E-mail"/>
-            <Entry Placeholder="Адрес"/>
-            <StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand">
-                <Button HorizontalOptions="Start"
-                        Text="отмена"/>
-                <Button HorizontalOptions="End"
-                        Text="изменить"/>
+        <ScrollView>
+            <StackLayout Padding="30" Spacing="20">
+                <Entry Text="{Binding NameProject}" Placeholder="Имя проекта" />
+                <Editor Text="{Binding Description}" Placeholder="Описание"/>
+                <Entry Text="{Binding NumberPhone}" Placeholder="Телефон №1"/>
+                <Entry Text="{Binding Email}" Placeholder="E-mail"/>
+                <Entry Text="{Binding Address}" Placeholder="Адрес"/>
+                <StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand">
+                    <Button Text="Отмена"
+                            x:Name="btn_cancel"
+                            Clicked="btn_cancel_Clicked"
+                            HorizontalOptions="FillAndExpand"/>
+                    <Button Text="Изменить"
+                            x:Name="btn_edit"
+                            Clicked="btn_edit_Clicked"
+                            HorizontalOptions="FillAndExpand"/>
+                </StackLayout>
             </StackLayout>
-            
-        </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

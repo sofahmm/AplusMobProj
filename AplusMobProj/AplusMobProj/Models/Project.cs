@@ -5,10 +5,12 @@ using SQLite;
 
 namespace AplusMobProj.Models
 {
+    [Table("Projects")]
     public class Project
     {
-        [PrimaryKey, AutoIncrement]
+        [PrimaryKey, AutoIncrement, Column("_id")]
         public int ID { get; set; }
+        [Unique]
         public string NameProject { get; set; }
         public string Description { get; set; }
         public string NumberPhone { get; set; }

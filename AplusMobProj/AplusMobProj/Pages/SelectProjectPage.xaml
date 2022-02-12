@@ -5,51 +5,38 @@
              Visual="Material"
              Title="Projects">
     <NavigationPage.TitleView>
-        <StackLayout Padding="0,0,20,0" Orientation="Horizontal">
-            <Label FontSize="Title"
-                   HorizontalOptions="CenterAndExpand"
-                   Text="Проекты"
-                   TextColor="White"/>
-            <Label x:Name="Add"
-                   FontFamily="ProjectFont"
-                   FontSize="Title"
-                   HorizontalOptions="EndAndExpand"
-                   Text="&#xe145;"
-                   TextColor="White">
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Проекты" FontSize="Large" VerticalOptions="CenterAndExpand"
+                   HorizontalOptions="CenterAndExpand"  TextColor="White" ></Label>
+            <Label
+                FontFamily="FontProject"
+                FontSize="Title"
+                Text="&#xe145;"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="End"
+                TextColor="White"
+                Padding="5">
                 <Label.GestureRecognizers>
                     <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
                 </Label.GestureRecognizers>
             </Label>
         </StackLayout>
     </NavigationPage.TitleView>
-
-    <ContentPage.Resources>
-        <ResourceDictionary>
-            <x:Array x:Key="Projects" Type="{x:Type x:String}">
-                <x:String>Проект 1</x:String>
-                <x:String>Проект 2</x:String>
-                <x:String>Проект 3</x:String>
-                <x:String>Проект 4</x:String>
-                <x:String>Проект 5</x:String>
-                <x:String>Проект 6</x:String>
-                <x:String>Проект 7</x:String>
-                <x:String>Проект 8</x:String>
-                <x:String>Проект 9</x:String>
-                <x:String>Проект 10</x:String>
-                <x:String>Проект 11</x:String>
-                <x:String>Проект 12</x:String>
-                <x:String>Проект 13</x:String>
-                <x:String>Проект 14</x:String>
-                <x:String>Проект 15</x:String>
-                <x:String>Проект 16</x:String>
-                <x:String>Проект 17</x:String>
-                <x:String>Проект 18</x:String>
-                <x:String>Проект 19</x:String>
-                <x:String>Проект 20</x:String>
-            </x:Array>
-        </ResourceDictionary>
-    </ContentPage.Resources>
-    <StackLayout>
-        <ListView x:Name="project_lv" ItemsSource="{StaticResource Key=Projects}" ItemSelected="project_lv_ItemSelected"/>
-    </StackLayout>
+    <ScrollView>
+        <StackLayout>
+            <ListView x:Name="projects_lv" SeparatorColor="Black" ItemsSource="{Binding}"  ItemSelected="projects_lv_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Padding="10" Text="{Binding NameProject}" TextColor="Black" FontSize="Medium" />
+                                </StackLayout>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ScrollView>
 </ContentPage>

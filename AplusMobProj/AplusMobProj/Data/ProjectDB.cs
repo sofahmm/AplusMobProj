@@ -13,11 +13,11 @@ namespace AplusMobProj.Data
         public ProjectDB(string connectionString)
         {
             db = new SQLiteAsyncConnection(connectionString);
-            db.CreateTableAsync<Project>().Wait();
+            db.CreateTableAsync<Project>();
         }
-        public Task<List<Project>> GetProjectAsync()
+        public IEnumerable<Project> GetProjectAsync()
         {
-            return db.Table<Project>().ToListAsync();
+            return db.Table<Project>().ToList();
         }
         public Task<Project> GetProjectAsync(int id)
         {
@@ -36,9 +36,9 @@ namespace AplusMobProj.Data
                 return db.InsertAsync(project);
             }
         }
-        public Task<int> DeleteProjectAsync(Project project)
+        public Task<int> DeleteProjectAsync(int id)
         {
-            return db.DeleteAsync(project);
+            return db.DeleteAsync<Project>(id);
         }
     }
 }

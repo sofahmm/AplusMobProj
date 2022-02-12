@@ -4,9 +4,22 @@
              xmlns:local="clr-namespace:AplusMobProj.Pages"
              x:Class="AplusMobProj.Pages.InformationProjectPage">
   <!--Pages can be added as references or inline-->
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal">
+            <Label x:Name="lbl_namepr" HorizontalOptions="CenterAndExpand"></Label>
+            <Label HorizontalOptions="EndAndExpand"
+                   FontFamily="ProjectFont"
+                   Text="&#xe3c9;"
+                   TextColor="White">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                </Label.GestureRecognizers>
+            </Label> 
+        </StackLayout>
+    </NavigationPage.TitleView>
     <TabbedPage.Children>
-        <local:AboutProjectPage Title=""/>
-        <local:ImageProjectPage Title=""/>
-        <local:ContactsProjectPage Title=""/>
+        <local:AboutProjectPage Title="О проекте"/>
+        <local:ImageProjectPage Title="Картинки"/>
+        <local:ContactsProjectPage Title="Контакты"/>
     </TabbedPage.Children>
 </TabbedPage>

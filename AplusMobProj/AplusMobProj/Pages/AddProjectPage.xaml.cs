@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using AplusMobProj.Models;
 
 namespace AplusMobProj.Pages
 {
@@ -15,6 +16,21 @@ namespace AplusMobProj.Pages
         public AddProjectPage()
         {
             InitializeComponent();
+        }
+
+        private void btn_cancel_Clicked(object sender, EventArgs e)
+        {
+            this.Navigation.PopAsync();
+        }
+
+        private async void btn_add_Clicked(object sender, EventArgs e)
+        {
+            var project = (Project)BindingContext;
+            if (!String.IsNullOrEmpty(project.NameProject))
+            {
+                await App.ProjectDB.SaveProjectAsync(project);
+            }
+            await this.Navigation.PopAsync();
         }
     }
 }

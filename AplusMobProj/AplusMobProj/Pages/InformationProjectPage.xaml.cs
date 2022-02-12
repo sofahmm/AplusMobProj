@@ -15,7 +15,12 @@ namespace AplusMobProj.Pages
         public InformationProjectPage(string projName)
         {
             InitializeComponent();
-            Title = projName;
+            lbl_namepr.Text = projName;
+        }
+
+        private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Pages.EditProjectPage());
         }
     }
 }

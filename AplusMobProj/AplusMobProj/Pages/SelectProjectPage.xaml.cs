@@ -12,19 +12,25 @@ namespace AplusMobProj.Pages
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class SelectProjectPage : ContentPage
     {
+        public string[] projects { get; set; }
         public SelectProjectPage()
         {
             InitializeComponent();
         }
-
-        private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        protected override void OnAppearing()
         {
-
+            projects_lv.ItemsSource = App.ProjectDB.GetProjectAsync();
+            base.OnAppearing();
         }
 
-        private async void project_lv_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new InformationProjectPage(project_lv.SelectedItem.ToString()));
+            await Navigation.PushAsync(new Pages.AddProjectPage());
+        }
+
+        private async void projects_lv_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            await Navigation.PushAsync(new InformationProjectPage(projects_lv.SelectedItem.ToString()));
         }
     }
 }

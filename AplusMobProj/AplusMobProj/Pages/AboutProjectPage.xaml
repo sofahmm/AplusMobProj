@@ -2,11 +2,20 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AplusMobProj.Pages.AboutProjectPage">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+    <ScrollView>
+        <StackLayout Padding="10" Spacing="10">
+            <Label HorizontalOptions="Center"
+                   Text="Описание"/>
+            <Label HorizontalTextAlignment="Center"
+                   x:Name="infoFirst"/>
+            <Label HorizontalTextAlignment="Center" 
+                   x:Name="infoSecond"/>
+            <Label HorizontalTextAlignment="Center" 
+                   x:Name="infoThird"/>
+            <Label HorizontalTextAlignment="Center" 
+                   x:Name="infoFourth"/>
+            <Label HorizontalTextAlignment="Center" 
+                   x:Name="infoFifth"/>
         </StackLayout>
-    </ContentPage.Content>
+    </ScrollView>
 </ContentPage>
