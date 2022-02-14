@@ -11,7 +11,7 @@
 
             <StackLayout Orientation="Horizontal">
                 <Image Source="home.png"></Image>
-                <Image Source="home 1.png"></Image>
+                <Image Source="home.png"></Image>
             </StackLayout>
 
             <StackLayout Orientation="Horizontal">
