@@ -7,10 +7,14 @@
     <NavigationPage.TitleView>
         <StackLayout Orientation="Horizontal">
             <Label Text="{Binding NameProject}"
-                x:Name="lbl_namepr" HorizontalOptions="CenterAndExpand"></Label>
+                   TextColor="White"
+                   FontSize="Title"
+                   x:Name="lbl_namepr" 
+                   HorizontalOptions="CenterAndExpand"></Label>
             <Label HorizontalOptions="EndAndExpand"
                    FontFamily="ProjectFont"
                    Text="&#xe3c9;"
+                   Padding="10"
                    TextColor="White">
                 <Label.GestureRecognizers>
                     <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
