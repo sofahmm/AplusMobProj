@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using SQLite;
 using AplusMobProj.Models;
-using System.Threading.Tasks;
 
 namespace AplusMobProj.Data
 {
