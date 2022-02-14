@@ -3,10 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AplusMobProj.Pages.ContactsProjectPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout Padding="30" Spacing="20">
+            <Entry Text="{Binding NumberPhone}" Placeholder="Телефон №1"/>
+            <Entry Text="{Binding Email}" Placeholder="Email"/>
+            <Entry Text="{Binding Address}" Placeholder="Аддресс"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

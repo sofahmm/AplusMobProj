@@ -30,7 +30,7 @@ namespace AplusMobProj.Pages
             {
                 if (!String.IsNullOrEmpty(project.NameProject))
                 {
-                    await App.ProjectDB.SaveProjectAsync(project);
+                    App.ProjectDB.SaveProject(project);
                 }
                 await this.Navigation.PopAsync();
             }
@@ -41,7 +41,7 @@ namespace AplusMobProj.Pages
             var project = (Project)BindingContext;
             if (await DisplayAlert( "", $"Вы хотите удалить {project.NameProject}?", "Удалить", "Отмена"))
             {
-                await App.ProjectDB.DeleteProjectAsync(project.ID);
+                App.ProjectDB.DeleteProject(project.ID);
                 await Navigation.PushAsync(new SelectProjectPage());
             }
         }

@@ -9,13 +9,14 @@
             <Label Text="Проекты" FontSize="Large" VerticalOptions="CenterAndExpand"
                    HorizontalOptions="CenterAndExpand"  TextColor="White" ></Label>
             <Label
-                FontFamily="FontProject"
-                FontSize="Title"
+                FontFamily="ProjectFont"
+                FontSize="Large"
                 Text="&#xe145;"
                 VerticalOptions="CenterAndExpand"
                 HorizontalOptions="End"
                 TextColor="White"
-                Padding="5">
+                Padding="10"
+                Margin="10">
                 <Label.GestureRecognizers>
                     <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
                 </Label.GestureRecognizers>
@@ -30,7 +31,7 @@
                         <ViewCell>
                             <ViewCell.View>
                                 <StackLayout Orientation="Horizontal">
-                                    <Label Padding="10" Text="{Binding NameProject}" TextColor="Black" FontSize="Medium" />
+                                    <Label Padding="10" Text="{Binding NameProject}" TextColor="White" FontSize="Medium" />
                                 </StackLayout>
                             </ViewCell.View>
                         </ViewCell>

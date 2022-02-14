@@ -9,36 +9,36 @@ namespace AplusMobProj.Data
 {
     public class ProjectDB
     {
-        readonly SQLiteAsyncConnection db;
+        readonly SQLiteConnection db;
         public ProjectDB(string connectionString)
         {
-            db = new SQLiteAsyncConnection(connectionString);
-            db.CreateTableAsync<Project>();
+            db = new SQLiteConnection(connectionString);
+            db.CreateTable<Project>();
         }
-        public IEnumerable<Project> GetProjectAsync()
+        public IEnumerable<Project> GetProject()
         {
             return db.Table<Project>().ToList();
         }
-        public Task<Project> GetProjectAsync(int id)
+        public Project GetProject(int id)
         {
             return db.Table<Project>()
                                 .Where(i => i.ID == id)
-                                .FirstOrDefaultAsync();
+                                .FirstOrDefault();
         }
-        public Task<int> SaveProjectAsync(Project project)
+        public int SaveProject(Project project)
         {
             if(project.ID != 0)
             {
-                return db.UpdateAsync(project);
+                return db.Update(project);
             }
             else
             {
-                return db.InsertAsync(project);
+                return db.Insert(project);
             }
         }
-        public Task<int> DeleteProjectAsync(int id)
+        public int DeleteProject(int id)
         {
-            return db.DeleteAsync<Project>(id);
+            return db.Delete<Project>(id);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace AplusMobProj.Pages
             var project = (Project)BindingContext;
             if (!String.IsNullOrEmpty(project.NameProject))
             {
-                await App.ProjectDB.SaveProjectAsync(project);
+                App.ProjectDB.SaveProject(project);
             }
             await this.Navigation.PopAsync();
         }

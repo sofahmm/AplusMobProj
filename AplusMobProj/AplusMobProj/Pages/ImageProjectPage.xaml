@@ -3,10 +3,26 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AplusMobProj.Pages.ImageProjectPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout Padding="10" Spacing="20">
+            <StackLayout Orientation="Horizontal">
+                <Image Source="home.png"></Image>
+                <Image Source="home.png"></Image>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Image Source="home.png"></Image>
+                <Image Source="home 1.png"></Image>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Image Source="home.png"></Image>
+                <Image Source="home.png"></Image>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Image Source="home.png"></Image>
+                <Image Source="home.png"></Image>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -6,7 +6,8 @@
   <!--Pages can be added as references or inline-->
     <NavigationPage.TitleView>
         <StackLayout Orientation="Horizontal">
-            <Label x:Name="lbl_namepr" HorizontalOptions="CenterAndExpand"></Label>
+            <Label Text="{Binding NameProject}"
+                x:Name="lbl_namepr" HorizontalOptions="CenterAndExpand"></Label>
             <Label HorizontalOptions="EndAndExpand"
                    FontFamily="ProjectFont"
                    Text="&#xe3c9;"
